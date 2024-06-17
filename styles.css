@@ -1,0 +1,249 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    color: #131313;
+    font-family: 'Open Sans', sans-serif;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.primary-navigation {
+    border: 1px solid rgb(207, 206, 204);
+    display: flex;
+    align-items: center;
+}
+
+.nav-list {
+    width: 1152px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 0.5rem;
+    padding-left: 24px;
+    padding-right: 24px;
+    margin: auto;
+    height: 70px;
+    list-style: none;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    line-height: 65px;
+}
+
+.nav-list a:hover {
+    box-shadow: 0px -5px 0px #E21216 inset;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+
+.nav-list #sign-in
+{
+    box-shadow: 0px 0 6px 0 rgba(0, 0, 0, 0.3);
+}
+
+.nav-list #deals a, .nav-list #menu a {
+    font-size: 18px;
+    padding-bottom: 10px;
+}
+
+.nav-list .logo {
+    flex-basis: 8%;
+    padding-top: 0.5rem;
+}
+
+.nav-list .logo a {
+    box-shadow: none;
+    transition: none;
+}
+
+.nav-list #deals {
+    flex-basis: 8%;
+}
+
+.nav-list #menu {
+    flex-basis: 8%;
+}
+
+.nav-list .spacer {
+    flex-basis: 29%;
+}
+
+.nav-list #location-pin {
+    flex-basis: 22%;
+}
+
+#location-pin a, #sign-in a, #cart a{
+    display: flex;
+    flex-direction: row;
+    line-height: 0;
+    margin-top: 15px;
+    justify-content: center;
+    margin-right: 15px;
+    margin-left: 15px;
+    padding-bottom: 10px;
+}
+
+#location-pin a {
+    gap: 0.1em;
+}
+
+.location-wrapper, .sign-in-wrapper, .cart-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    line-height: 1em;
+}
+
+#location-pin img{
+    width: 21px;
+    height: 28px;
+}
+
+#sign-in a {
+    gap: 0.5em;
+}
+
+#sign-in img {
+    width: 30px;
+    height: 30px;
+}
+
+#carryout-p, #rewards-p {
+    font-size: 10px;
+    color: #E21216;
+    letter-spacing: 1px;
+}
+
+#address-p, #sign-in-p {
+    font-size: 14px;
+    color: black;
+}
+
+
+.nav-list #sign-in {
+    flex-basis: 20%;
+}
+
+.nav-list #cart {
+    flex-basis: 15%;
+}
+
+#cart a {
+    gap: 0.7em;
+}
+
+#cart img{
+    width: 33px;
+    height: 28px;
+}
+
+#item-count-p {
+    position: absolute;
+    transform: translate(45px, 10px);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+#price-p {
+    padding-top: 5px;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+/* MENU DROPDOWN */
+
+/*initial state*/
+.options {
+    background-color: white;
+    list-style: none;
+    width: 230px;
+    margin-top: 5px;
+    border-radius: 5px;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    box-shadow: 0px 0 6px 0 rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+@keyframes fadeInDropdown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.dropdown.active .options {
+    display: flex;
+    animation: fadeInDropdown 0.2s forwards;
+} 
+
+
+.options a {
+    display: flex;
+    border-bottom: 1px solid rgb(207, 206, 204);
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+.options li{
+    font-size: 14px;
+    line-height: normal;
+}
+
+.options a:hover {
+    box-shadow: 2px 0px 0px #E21216 inset;
+    transition: background-color 0.3s ease;
+    background-color: #e7e7e7;
+}
+
+
+#menu-icon {
+    transform: translate(-2px, 5px);
+    font-size: 25px;
+}
+
+/* Main Content Stuff */
+.main {
+    padding-left: 150px;
+    padding-top: 40px;
+    padding-right: 150px;
+    /* border: 2px solid red; */
+    display: flex;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 50%;
+}
+
+.pizza-image-container {
+    flex-basis: 50%;
+}
+
+.main img {
+    max-width: 100%;
+}
+
+#pizza-heading {
+    border: 5px solid rgb(207, 206, 204);
+}
+#pizza-heading h1 {
+    font-family: 'Lora', sans-serif;
+    font-weight: 900;
+    font-size: 48px;
+}
