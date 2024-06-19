@@ -242,7 +242,6 @@ body {
 .main img {
     max-width: 100%;
     border-radius: 1rem;
-    margin-top: 5rem;
 }
 
 #pizza-heading {
@@ -346,7 +345,7 @@ body {
 
 #onions-top img {
     width: 3rem;
-    padding-left: 1rem;
+    padding-left: 0.5rem;
 }
 
 .meat-button, .veg-button {
