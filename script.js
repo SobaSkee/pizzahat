@@ -112,17 +112,12 @@ toppings.forEach(topping => {
         
 
         if (topping === pepperoni) {
-            if (checkbox.checked) {
-                pizzaCost += 0.8;
-            }
-            else {
-                pizzaCost -= 0.8;
-            }
+            pizzaCost += checkbox.checked ? 0.8 : -0.8;
         }
         else if (topping === bacon) {
             pizzaCost += checkbox.checked ? 0.8 : -0.8;
         }
-        else if (italianSausage && checkbox.checked) {
+        else if (topping === italianSausage) {
             pizzaCost += checkbox.checked ? 1 : -1;
         }
         pizzaCostDisplay.innerHTML = `$${pizzaCost.toFixed(2)}`;
