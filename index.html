@@ -65,7 +65,7 @@
                 </li>
                 <li class="nav-button" id="cart">
                     <p id="item-count-p">
-                        0
+                    0
                     </p>
                     <a href="#" >
                     <img src="./images/Cart_D.png" alt="cart">
@@ -82,7 +82,7 @@
             <div class="main-content">
                 <div class="left-side">
                     <div id="pizza-heading">
-                        <h1>Create Your Own (spacing)</h1>
+                        <h1>Create Your Own</h1>
                         <p>BUILD YOUR PIZZA</p>
                     </div>
                     <div id="crust-section">
@@ -171,6 +171,7 @@
             <p id="price">$0.00</p>
             <div class="price-wrapper">
                <select name="quantity-selector" id="quantity-selector">
+                    <option value="0">0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -178,8 +179,9 @@
                     <option value="5">5</option>
                     <option value="6">6</option>
                 </select>
-                <button id="add-cart-button">ADD TO ORDER</button> 
+                <button id="add-cart-button">ADD TO ORDER</button>
             </div>
+            <button id="reset-btn">RESET</button>
         </div>
         <div class="information-card">
             <p>Enter your card info</p>

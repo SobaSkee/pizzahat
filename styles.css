@@ -159,6 +159,11 @@ body {
     font-size: 18px;
 }
 
+.cart-wrapper {
+    width: 3rem;
+    text-align: center;
+}
+
 /* MENU DROPDOWN */
 
 /*initial state*/
@@ -258,6 +263,10 @@ body {
     border: 2px solid blue;
     font-size: 0.9rem;
     font-weight: 600;
+}
+
+.left-side {
+    width: 90%;
 }
 
 .left-side .dropdown {
@@ -374,15 +383,14 @@ footer {
 
 .price-wrapper {
     display: flex;
-    border-radius: 0.5rem;
+    border-radius: 1rem;
     overflow: hidden;
-
+    border: 1px solid gray;
 }
 
 #quantity-selector {
     flex-basis: 20%;
     padding: 0.8rem;
-    border-radius: 0;
     border: none;
 }
 
@@ -395,12 +403,22 @@ footer {
     font-size: 1rem;
     font-weight: 900;
     letter-spacing: 1px;
-    border-radius: 0;
     border: none;
     background-color: #e21216;
     color: white;
+    /* margin-right: 2rem; */
 }
 
 .information-card {
     border: 5px solid black;
+}
+
+#reset-btn {
+    padding: 0.8rem;
+    margin-left: 2rem;
+    border-radius: 1rem;
+    border: 1px solid gray;
+    font-size: 0.8rem;
+    font-weight: 600;
+    
 }
