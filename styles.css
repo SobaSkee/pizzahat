@@ -213,26 +213,28 @@ body {
 
 #menu-icon {
     transform: translate(-2px, 5px);
-    font-size: 25px;
+    font-size: 1.5rem;
 }
 
 /* Main Content Stuff */
 .main {
-    padding-left: 150px;
-    padding-top: 40px;
-    padding-right: 150px;
+    padding-left: 9rem;
+    padding-right: 9rem;padding-top: 3rem;
+    padding-bottom: 3rem;
     /* border: 2px solid red; */
     display: flex;
+    /* min-height: 100vh; */
 }
 
 .main-content {
     display: flex;
     flex-direction: row;
-    flex-basis: 50%;
+    flex-basis: 60%;
 }
 
 .pizza-image-container {
-    flex-basis: 50%;
+    flex-basis: 40%;
+    border: 2px solid red;
 }
 
 .main img {
@@ -240,10 +242,165 @@ body {
 }
 
 #pizza-heading {
-    border: 5px solid rgb(207, 206, 204);
+    border: 5px solid gray;
+    margin-bottom: 2rem;
 }
+
 #pizza-heading h1 {
     font-family: 'Lora', sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    border: 2px solid red;
+}
+
+#pizza-heading p {
+    border: 2px solid blue;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.left-side .dropdown {
+    border: 5px solid gray;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    /* change this display to none later */
+    display: none;
+    flex-direction: column;
+
+}
+
+.left-side .dropdown.active {
+    display: flex;
+    animation: fadeInDropdown 0.2s forwards;
+}
+
+.dropdown .subheading {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.select-btn .subheading {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+
+.left-side .select-btn {
+    border: 2px solid yellow;
+    display: flex;
+    align-items: center;
+}
+
+.left-side .select-btn #menu-icon {
+    margin-left: auto;
+    padding-right: 0.5rem;
+    font-size: 2rem;
+}
+
+.size-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.size-button {
+    width: 100%;
+    padding: 0.5rem;
+    box-shadow: 0px 3px 3px -2px rgba(0,0,0,0.2),0px 3px 4px 0px rgba(0,0,0,0.14),0px 1px 8px 0px rgba(0,0,0,0.12);
+    border-radius: 0.5rem;
+    background-color: white;
+    border: none;
+}
+
+/* .size-button:visited {
+    border: 2px solid #e71316;
+} */
+
+.size-button p {
+    line-height: 1.5rem;
+    font-size: 14px;
+}
+
+.size-button.active {
+    border: 2px solid #e71316;
+}
+
+.meat-button {
+    width: 85%;
+    padding: 0.2rem;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+
+.meat-button p {
+    margin-left: 2rem;
+    font-size: 1rem;
+}
+.meat-button .checkbox {
+    margin-left: auto;
+    transform: translateX(-10px);
+    width: 1.3rem;
+    height: 1.3rem;
+}
+
+/* footer stuff with price container */
+footer {
+    margin-top: auto;
+}
+
+.price-container {
+    bottom: 0;
+    /* border: 5px solid red; */
+    /* display: flex; */
+    flex-direction: row;
+    padding: 1.3rem;
+    align-items: center;
+    box-shadow: 0px 4px 0px 0px rgb(255, 255, 255), 0px -2px 4px 0px rgba(0, 0, 0, 0.3);
+    display: none;
+}
+
+.price-container.active {
+    display: flex;
+}
+
+.price-container #price {
+    font-size: 1.7rem;
     font-weight: 900;
-    font-size: 48px;
+    margin-right: 1rem;
+    margin-left: 8rem;
+}
+
+.price-wrapper {
+    display: flex;
+    border-radius: 0.5rem;
+    overflow: hidden;
+
+}
+
+#quantity-selector {
+    flex-basis: 20%;
+    padding: 0.8rem;
+    border-radius: 0;
+    border: none;
+}
+
+#add-cart-button {
+    flex-basis: 80%;
+    /* padding-top: 0.8rem;
+    padding-bottom: 0.rem; */
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    font-size: 1rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    border-radius: 0;
+    border: none;
+    background-color: #e21216;
+    color: white;
+}
+
+.information-card {
+    border: 5px solid black;
 }

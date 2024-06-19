@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/Logo_PH_Retro.png">
 </head>
 <body>
     <header class="primary-header">
@@ -79,9 +80,85 @@
     <main>
         <div class="main">
             <div class="main-content">
-                <div id="pizza-heading">
-                    <h1>Create Your Own</h1>
-                    <p>BUILD YOUR PIZZA</p>
+                <div class="left-side">
+                    <div id="pizza-heading">
+                        <h1>Create Your Own (spacing)</h1>
+                        <p>BUILD YOUR PIZZA</p>
+                    </div>
+                    <div id="crust-section">
+                        <div class="select-btn">
+                            <div class="crust-wrapper">
+                                <h2 class="subheading">Crust</h2>
+                                <p>Choose your crust size</p>
+                            </div>
+                            <i class="bx bx-chevron-down" id="menu-icon"></i>
+                        </div>
+                        <div class="dropdown">
+                            <h2 class="subheading">Size</h2>
+                            <div class="size-buttons">
+                                <button class="size-button" id="small-size">
+                                    <p>Small - 10"</p> 
+                                    <p>$6.00</p></button>
+                                <button class="size-button" id="medium-size">
+                                    <p>Medium - 14"</p> 
+                                    <p>$11.00</p></button>
+                                </button>
+                                <button class="size-button" id="large-size">
+                                    <p>Large - 16"</p> 
+                                    <p>$15.00</p></button>
+                                </button>
+                            </div>
+                        </div>      
+                    </div>
+                    <div id="topping-section">
+                        <div class="select-btn">
+                            <div class="topping-wrapper">
+                                <h2 class="subheading">Toppings</h2>
+                                <p>Choose your toppings (optional)</p>
+                            </div>
+                            <i class="bx bx-chevron-down" id="menu-icon"></i>
+                        </div>
+                        <div class="dropdown">
+                            <h2 class="subheading">Meats</h2>
+                            <div class="meat-buttons">
+                                <button class="meat-button" id="pepperoni-top">
+                                    <img src="https://placehold.co/50x50" alt="">
+                                    <p>Pepperoni (+$0.80)</p> 
+                                    <input type="checkbox" class="checkbox">
+                                </button>
+                                <button class="meat-button" id="bacon-top">
+                                    <img src="https://placehold.co/50x50" alt="">
+                                    <p>Bacon (+$0.80)</p> 
+                                    <input type="checkbox" class="checkbox">
+                                </button>
+                                <button class="meat-button" id="italian-sausage-top">
+                                    <img src="https://placehold.co/50x50" alt="">
+                                    <p>Italian Sausage (+$1.00)</p> 
+                                    <input type="checkbox" class="checkbox">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="sauce-section">
+                        <div class="select-btn">
+                            <div class="sauce-wrapper">
+                                <h2 class="subheading">The Sauce</h2>
+                                <p>Choose your Sauce</p>
+                            </div>
+                            <i class="bx bx-chevron-down" id="menu-icon"></i>
+                        </div>
+                        <div class="dropdown">
+                            <h2 class="subheading">Sauces</h2>
+                            <div class="sauce-selection">
+                                <label for="sauces"></label>
+                                <select name="sauces" id="sauces">
+                                    <option value="Classic Marinara">Classic Marinara</option>
+                                    <option value="Garlic Parmesan">Garlic Parmesan</option>
+                                    <option value="Barbeque">Barbeque</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="pizza-image-container">
@@ -90,26 +167,25 @@
         </div>
     </main>
     <footer>
-        Footer
+        <div class="price-container">
+            <p id="price">$0.00</p>
+            <div class="price-wrapper">
+               <select name="quantity-selector" id="quantity-selector">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+                <button id="add-cart-button">ADD TO ORDER</button> 
+            </div>
+        </div>
+        <div class="information-card">
+            <p>PUT INFORMATION STUFF HERE</p>
+        </div>
+
     </footer>
 
     <script src="script.js"></script>
-
-
-
-<!-- <a href="#" class="logo">
-    <img src="./images/Logo_PH_Retro.png" alt="">
-</a>
-<ul>
-    <li><a href="#">Deals</a></li>
-    <li><a href="#" class="dropdown">Menu</a></li>
-    <li><a href="#" class="nav-button"> -->
-        <!--put contents in a div maybe-->
-        <!-- <img src="" alt="location pin">
-        <p>CARRYOUT 15 MINS</p>
-        <p>(put address here)</p> -->
-        <!-- Carryout 15 mins
-    </a></li>
-    <li><a href="#" class="nav-button">Sign in</a></li>
-    <li><a href="#" class="nav-button">$0.00</a></li>
-</ul> -->
+</body>
