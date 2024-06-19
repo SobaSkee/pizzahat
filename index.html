@@ -89,7 +89,7 @@
                         <div class="select-btn">
                             <div class="crust-wrapper">
                                 <h2 class="subheading">Crust</h2>
-                                <p>Choose your crust size</p>
+                                <p>Choose your crust size <span>(required)</span></p>
                             </div>
                             <i class="bx bx-chevron-down" id="menu-icon"></i>
                         </div>
@@ -122,18 +122,36 @@
                             <h2 class="subheading">Meats</h2>
                             <div class="meat-buttons">
                                 <button class="meat-button" id="pepperoni-top">
-                                    <img src="https://placehold.co/50x50" alt="">
+                                    <img src="./images/icon_topping_Pepperoni.webp" alt="">
                                     <p>Pepperoni (+$0.80)</p> 
                                     <input type="checkbox" class="checkbox">
                                 </button>
                                 <button class="meat-button" id="bacon-top">
-                                    <img src="https://placehold.co/50x50" alt="">
+                                    <img src="./images/icon_topping_Bacon.webp" alt="">
                                     <p>Bacon (+$0.80)</p> 
                                     <input type="checkbox" class="checkbox">
                                 </button>
                                 <button class="meat-button" id="italian-sausage-top">
-                                    <img src="https://placehold.co/50x50" alt="">
+                                    <img src="./images/icon_topping_ItalianSausage.webp" alt="">
                                     <p>Italian Sausage (+$1.00)</p> 
+                                    <input type="checkbox" class="checkbox">
+                                </button>
+                            </div>
+                            <h2 class="subheading">Vegetarian</h2>
+                            <div class="veg-buttons">
+                                <button class="meat-button" id="onions-top">
+                                    <img src="./images/PizzaBuilder_ToppingPile_CaramelizedOnions_Sidebar_Web_75x100.webp" alt="">
+                                    <p>Caramelized Onions (+$0.50)</p> 
+                                    <input type="checkbox" class="checkbox">
+                                </button>
+                                <button class="meat-button" id="jalapenos-top">
+                                    <img src="./images/icon_topping_Jalapeno.webp" alt="">
+                                    <p>Jalapeño Peppers (+$0.50)</p> 
+                                    <input type="checkbox" class="checkbox">
+                                </button>
+                                <button class="meat-button" id="pineapple-top">
+                                    <img src="./images/icon_topping_Pineapple.avif" alt="">
+                                    <p>Golden Pineapple (+$2.00)</p> 
                                     <input type="checkbox" class="checkbox">
                                 </button>
                             </div>
@@ -150,12 +168,17 @@
                         <div class="dropdown">
                             <h2 class="subheading">Sauces</h2>
                             <div class="sauce-selection">
-                                <label for="sauces"></label>
-                                <select name="sauces" id="sauces">
-                                    <option value="Classic Marinara">Classic Marinara</option>
-                                    <option value="Garlic Parmesan">Garlic Parmesan</option>
-                                    <option value="Barbeque">Barbeque</option>
-                                </select>
+                                <!-- <label for="sauces"></label> -->
+                                <img src="./images/Marinara.png" alt="">
+                                <div class="selector-wrapper">
+                                    <select name="sauces" id="sauce-selector">
+                                    <option value="marinara-sauce" id="marinara-sauce">Classic Marinara, regular</option>
+                                    <option value="buffalo-sauce" id="buffalo-sauce">Buffalo, regular</option>
+                                    <option value="barbeque-sauce"
+                                    id="barbeque-sauce">Barbeque</option>
+                                    </select>
+                                </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -171,7 +194,6 @@
             <p id="price">$0.00</p>
             <div class="price-wrapper">
                <select name="quantity-selector" id="quantity-selector">
-                    <option value="0">0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -183,13 +205,52 @@
             </div>
             <button id="reset-btn">RESET</button>
         </div>
-        <div class="information-card">
+        <div class="order-container">
+            <p>Your order is a small barbeque pizza with pepperoni.</p>
+            <button><a href="https://www.google.com/">Go to Checkout</a></button>
+            
+        </div>
+        <script>
+            function scrollPageDown() {
+                window.scrollBy({
+                    top: window.innerHeight,
+                    behavior: 'smooth'
+                });
+            }
+
+            function checkOrderContainer() {
+                var orderContainer = document.querySelector('.order-container');
+                var priceContainer = document.querySelector('.price-container');
+                if (orderContainer.classList.contains('active')) {
+                    scrollPageDown();
+                }
+                if (priceContainer.classList.contains('active')) {
+                    scrollPageDown();
+                }
+            }
+
+            var orderObserver = new MutationObserver(checkOrderContainer);
+            orderObserver.observe(document.querySelector('.order-container'), {
+                attributes: true,
+                attributeFilter: ['class'],
+                childList: false,
+                subtree: false
+            });
+            var priceObserver = new MutationObserver(checkOrderContainer);
+            priceObserver.observe(document.querySelector('.price-container'), {
+                attributes: true,
+                attributeFilter: ['class'],
+                childList: false,
+                subtree: false
+            })
+        </script>
+        <!-- <div class="information-card">
             <p>Enter your card info</p>
             <input type="text" placeholder="card number">
             <input type="text" placeholder="expiration date">
             <input type="text" placeholder="3 digits on the back">
             <p>thank you :></p>
-        </div>
+        </div> -->
 
     </footer>
 
